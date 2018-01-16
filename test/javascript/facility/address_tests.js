@@ -54,11 +54,11 @@ describe('Verify Facility Address', function () {
   })
   it('verify Facility Address street and apartment', function () {
     let physicalAddressStreetApt = AddressCompShallow.props().children.props.children[0].props.children.props.children[0].props.streetApt
-    expect(physicalAddressStreetApt).toBe('36 Sequoia Dr')
+    expect(physicalAddressStreetApt).toBe('36 Sequoia Dr,')
   })
   it('verify Facility Address city and country', function () {
     let physicalAddressCityCounty = AddressCompShallow.props().children.props.children[0].props.children.props.children[0].props.cityCountry
-    expect(physicalAddressCityCounty).toBe('Aliso Viejo,CA 92656')
+    expect(physicalAddressCityCounty).toBe('Aliso Viejo, CA 92656')
   })
   it('verify Facility Address county name', function () {
     let countyNameValue = AddressCompShallow.props().children.props.children[0].props.children.props.children[1].props.value
@@ -70,11 +70,11 @@ describe('Verify Facility Address', function () {
   })
   it('verify Postal Address street and apartment', function () {
     let postalAddressStreetApt = AddressCompShallow.props().children.props.children[1].props.children.props.children[0].props.streetApt
-    expect(postalAddressStreetApt).toBe('36 Sequoia Dr')
+    expect(postalAddressStreetApt).toBe('36 Sequoia Dr,')
   })
   it('verify Postal Address city and country', function () {
     let postalAddressCityCounty = AddressCompShallow.props().children.props.children[1].props.children.props.children[0].props.cityCountry
-    expect(postalAddressCityCounty).toBe('Aliso Viejo,CA 92656')
+    expect(postalAddressCityCounty).toBe('Aliso Viejo, CA 92656')
   })
   it('verify alternative phone number value', function () {
     let alternativeNumberValue = AddressCompShallow.props().children.props.children[1].props.children.props.children[1].props.value

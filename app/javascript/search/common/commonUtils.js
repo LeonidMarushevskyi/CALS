@@ -3,7 +3,7 @@ import React from 'react'
 export const respectiveStreetAddressOrNA = (addresses, addressType) => {
   const addressObject = addresses && addresses.find(o => o.type === addressType)
   if (addressObject && addressObject.address.street_address) {
-    return addressObject.address.street_address
+    return addressObject.address.street_address + ','
   } else {
     return 'N/A'
   }
@@ -12,8 +12,8 @@ export const respectiveStreetAddressOrNA = (addresses, addressType) => {
 export const cityStateZipOfRespectiveAddressOrNA = (addresses, addressType) => {
   const addressObject = addresses && addresses.find(o => o.type === addressType)
   if (addressObject) {
-    const citySateString = checkForValueOrBlank(addressObject.address.city) + ',' + checkForValueOrBlank(addressObject.address.state) + ' ' + checkForValueOrBlank(addressObject.address.zip_code)
-    return citySateString === ', ' ? '' : citySateString
+    const cityStateString = checkForValueOrBlank(addressObject.address.city) + ',' + ' ' + checkForValueOrBlank(addressObject.address.state) + ' ' + checkForValueOrBlank(addressObject.address.zip_code)
+    return cityStateString === ',  ' ? '' : cityStateString
   } else {
     return 'N/A'
   }
@@ -35,8 +35,8 @@ export const respectiveNumberOrNA = (phones, phoneRelation) => {
 export const respectiveFullAddressOrNA = (addresses, addressType) => {
   const addressObject = addresses && addresses.find(o => o.type === addressType)
   if (addressObject) {
-    const stringForFullAddress = checkForValueOrBlank(addressObject.address.street_address) + ',' + checkForValueOrBlank(addressObject.address.city) + ',' + checkForValueOrBlank(addressObject.address.state) + ' ' + checkForValueOrBlank(addressObject.address.zip_code)
-    return stringForFullAddress === ',, ' ? '' : stringForFullAddress
+    const stringForFullAddress = checkForValueOrBlank(addressObject.address.street_address) + ',' + ' ' + checkForValueOrBlank(addressObject.address.city) + ',' + ' ' + checkForValueOrBlank(addressObject.address.state) + ' ' + checkForValueOrBlank(addressObject.address.zip_code)
+    return stringForFullAddress === ', ,  ' ? '' : stringForFullAddress
   } else {
     return 'N/A'
   }
