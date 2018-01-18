@@ -27,6 +27,7 @@ describe('Verify minor children Component View', function () {
 
   let setParentStateSpy = jasmine.createSpy()
   setFocusStateSpy = jasmine.createSpy('setFocusState')
+  let getFocusClassNameSpy = jasmine.createSpy('getFocusClassName')
 
   beforeEach(() => {
     setParentStateSpy = jasmine.createSpy('setParentState')
@@ -40,6 +41,7 @@ describe('Verify minor children Component View', function () {
       relationshipToApplicantTypes: relationshipTypes,
       setParentState: setParentStateSpy,
       setFocusState: setFocusStateSpy,
+      getFocusClassName: getFocusClassNameSpy,
       validator: validator
     }
 

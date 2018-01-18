@@ -29,6 +29,9 @@ describe('Verify other adults Component View', function () {
 
   beforeEach(() => {
     setParentStateSpy = jasmine.createSpy('setParentState')
+    let setFocusStateSpy = jasmine.createSpy('setFocusState')
+    let getFocusClassNameSpy = jasmine.createSpy('getFocusClassName')
+
     let handleRelationshipTypeToApplicantSpy = jasmine.createSpy('handleRelationshipTypeToApplicant')
     let onFieldChangeSpy = jasmine.createSpy('onFieldChange')
     let validator = new Validator({})
@@ -38,6 +41,8 @@ describe('Verify other adults Component View', function () {
       relationshipToApplicantTypes: relationshipTypes,
       setParentState: setParentStateSpy,
       onFieldChange: onFieldChangeSpy,
+      setFocusState: setFocusStateSpy,
+      getFocusClassName: getFocusClassNameSpy,
       handleRelationshipTypeToApplicant: handleRelationshipTypeToApplicantSpy,
       validator: validator
     }
@@ -52,6 +57,8 @@ describe('Verify other adults Component View', function () {
       relationshipToApplicantTypes={relationshipTypes}
       setParentState={setParentStateSpy}
       onFieldChange={onFieldChangeSpy}
+      setFocusState={setFocusStateSpy}
+      getFocusClassName={getFocusClassNameSpy}
       handleRelationshipTypeToApplicant={handleRelationshipTypeToApplicantSpy}
       validator={validator} />)
   })
