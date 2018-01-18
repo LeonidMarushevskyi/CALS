@@ -40,9 +40,24 @@ RSpec.feature 'Facilities', js: true, set_auth_header: true  do
 
   scenario 'select facility type dropdown and show search results' do
     visit search_index_path
+    select "Orange", :from => "county_select"
     find(:select, 'facility_select').first(:option, 'Adoption Agency').select_option
     find_button('search').click
-    expect(page).to have_text('Adventures in Family')
+    expect(page).to have_text('Open Door Adoption')
+  end
+
+  scenario 'find facilties by entering facility ID' do
+    visit search_index_path
+    fill_in 'Enter Facility ID #', with: '198798943'
+    find_button('search').click
+    expect(page).to have_text('Altadena Youth Shelter')
+  end
+
+  scenario 'find facilties by entering facility ID with alpha charecters' do
+    visit search_index_path
+    fill_in 'Enter Facility ID #', with: 'DL7oFNL0AB'
+    find_button('search').click
+    expect(page).to have_text('Sandy Beach Foster Care Home')
   end
 
   def facilities_list

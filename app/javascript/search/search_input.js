@@ -9,7 +9,7 @@ export default class SearchInput extends React.Component {
     super(props)
     this.state = {
       searchId: {
-        countyValue: this.props.userDetails.county_name || userDefaults,
+        countyValue: this.props.userDetails.county_name || userDefaults.county_name,
         facilityTypeValue: '',
         facilityIdValue: '',
         facilityNameValue: '',
@@ -71,10 +71,10 @@ export default class SearchInput extends React.Component {
               title='Facility ID #'
               columnWidth={2}>
               <InputComponent id='facilityIdValue'
-                fieldClassName='form-control type_number'
+                fieldClassName='form-control'
                 value={this.state.searchId.facilityIdValue}
                 placeholder='Enter Facility ID #'
-                type='number'
+                type='text'
                 onChange={(event) => this.handleChange('facilityIdValue', event.target.value)} />
             </InputDataBlock>
             <InputDataBlock

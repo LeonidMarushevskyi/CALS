@@ -21,9 +21,9 @@ http_interactions:
       content-type:
       - application/json
       date:
-      - Thu, 18 Jan 2018 19:23:42 GMT
+      - Thu, 18 Jan 2018 19:23:48 GMT
       set-cookie:
-      - rememberMe=deleteMe; Path=/; Max-Age=0; Expires=Wed, 17-Jan-2018 19:23:42
+      - rememberMe=deleteMe; Path=/; Max-Age=0; Expires=Wed, 17-Jan-2018 19:23:48
         GMT
       vary:
       - Accept-Encoding
@@ -221,7 +221,7 @@ http_interactions:
           } ]
         }
     http_version: 
-  recorded_at: Thu, 18 Jan 2018 19:23:43 GMT
+  recorded_at: Thu, 18 Jan 2018 19:23:49 GMT
 - request:
     method: get
     uri: https://calsapi.preint.cwds.io/dictionaries/facility-types
@@ -243,9 +243,9 @@ http_interactions:
       content-type:
       - application/json
       date:
-      - Thu, 18 Jan 2018 19:23:43 GMT
+      - Thu, 18 Jan 2018 19:23:49 GMT
       set-cookie:
-      - rememberMe=deleteMe; Path=/; Max-Age=0; Expires=Wed, 17-Jan-2018 19:23:43
+      - rememberMe=deleteMe; Path=/; Max-Age=0; Expires=Wed, 17-Jan-2018 19:23:49
         GMT
       vary:
       - Accept-Encoding
@@ -389,13 +389,13 @@ http_interactions:
           } ]
         }
     http_version: 
-  recorded_at: Thu, 18 Jan 2018 19:23:43 GMT
+  recorded_at: Thu, 18 Jan 2018 19:23:49 GMT
 - request:
     method: post
     uri: https://dora.preint.cwds.io/dora/facilities/facility/_search
     body:
       encoding: UTF-8
-      string: '{"query":{"bool":{"should":[{"bool":{"must":[{"match_phrase":{"id":"198798943"}}]}}]}}}'
+      string: '{"query":{"bool":{"should":[{"bool":{"must":[{"match_phrase":{"id":"DL7oFNL0AB"}}]}}]}}}'
     headers:
       Content-type:
       - application/json
@@ -409,38 +409,22 @@ http_interactions:
       content-type:
       - application/json
       date:
-      - Thu, 18 Jan 2018 19:23:44 GMT
+      - Thu, 18 Jan 2018 19:23:50 GMT
       set-cookie:
-      - rememberMe=deleteMe; Path=/; Max-Age=0; Expires=Wed, 17-Jan-2018 19:23:44
+      - rememberMe=deleteMe; Path=/; Max-Age=0; Expires=Wed, 17-Jan-2018 19:23:50
         GMT
       content-length:
-      - '5799'
+      - '2361'
       connection:
       - keep-alive
     body:
       encoding: UTF-8
-      string: '{"took":1,"timed_out":false,"_shards":{"total":5,"successful":5,"failed":0},"hits":{"total":1,"max_score":3.5723457,"hits":[{"_index":"facilities","_type":"facility","_id":"198798943","_score":3.5723457,"_source":{"href":null,"id":"198798943","capacity_last_changed":{"year":2006,"month":"OCTOBER","era":"CE","dayOfMonth":13,"dayOfWeek":"FRIDAY","dayOfYear":286,"leapYear":false,"monthValue":10,"chronology":{"calendarType":"iso8601","id":"ISO"}},"type":{"id":"732","value":"RUNAWAY
-        AND HOMELESS YOUTH SHELTER-GH"},"name":"Altadena Youth Shelter","licensee_name":"City
-        of Altadena","license_type":"A","assigned_worker":{"id":null,"value":null},"district_office":{"number":"34","name":"LA
-        METRO & VALLEY CR"},"license_number":"198798943","status":{"id":"3","value":"LICENSED"},"capacity":10,"license_effective_date":{"year":2013,"month":"OCTOBER","era":"CE","dayOfMonth":4,"dayOfWeek":"FRIDAY","dayOfYear":277,"leapYear":false,"monthValue":10,"chronology":{"calendarType":"iso8601","id":"ISO"}},"original_application_recieved_date":{"year":2013,"month":"JUNE","era":"CE","dayOfMonth":25,"dayOfWeek":"TUESDAY","dayOfYear":176,"leapYear":false,"monthValue":6,"chronology":{"calendarType":"iso8601","id":"ISO"}},"last_visit_date":{"hour":0,"minute":0,"nano":0,"second":0,"dayOfMonth":10,"dayOfWeek":"FRIDAY","dayOfYear":69,"month":"MARCH","monthValue":3,"year":2017,"chronology":{"calendarType":"iso8601","id":"ISO"}},"last_deferred_visit_date":null,"email_address":null,"last_visit_reason":{"id":"6","value":"COLLATERAL"},"last_deferred_visit_reason":null,"county":{"id":"19","value":"LOS
-        ANGELES","lis_code":null},"phones":[{"id":null,"relation":"primary","type":"Cell","number":"6267971087"}],"addresses":[{"id":null,"type":"Residential","address":{"id":null,"longitude":null,"lattitude":null,"deliverable":null,"street_address":"1849
-        N Lake Ave","city":"Altadena","state":"CA","zip_code":"91001","zip_suffix_code":null}},{"id":null,"type":"Mailing","address":{"id":null,"longitude":null,"lattitude":null,"deliverable":null,"street_address":"1849
-        N Lake Ave","city":"Altadena","state":"CA","zip_code":"91001","zip_suffix_code":null}}],"visits":[{"approval":"","visit_type":"Annual
-        10 month","visit_date":{"hour":0,"minute":0,"nano":0,"second":0,"dayOfMonth":28,"dayOfWeek":"FRIDAY","dayOfYear":301,"month":"OCTOBER","monthValue":10,"year":2011,"chronology":{"calendarType":"iso8601","id":"ISO"}},"visit_deferred_date":null},{"approval":"","visit_type":"Annual
-        22 month","visit_date":null,"visit_deferred_date":null},{"approval":"","visit_type":"Post
-        Licensing","visit_date":null,"visit_deferred_date":{"hour":0,"minute":0,"nano":0,"second":0,"dayOfMonth":6,"dayOfWeek":"WEDNESDAY","dayOfYear":310,"month":"NOVEMBER","monthValue":11,"year":1991,"chronology":{"calendarType":"iso8601","id":"ISO"}}},{"approval":"","visit_type":"Renewal","visit_date":null,"visit_deferred_date":null}],"annual_visit_year":12,"prelicensing_visit_date":null,"facility_source":"LIS","children":[],"inspections":[],"complaints":[{"id":"9136","complaint_date":{"hour":0,"minute":0,"nano":0,"second":0,"dayOfMonth":3,"dayOfWeek":"MONDAY","dayOfYear":277,"month":"OCTOBER","monthValue":10,"year":2016,"chronology":{"calendarType":"iso8601","id":"ISO"}},"assigned_worker":"Mullah
-        Mahaboob","control_number":"34-CR-20161003145019","priority_level":"3","status":"Approved","approval_date":{"hour":0,"minute":0,"nano":0,"second":0,"dayOfMonth":19,"dayOfWeek":"THURSDAY","dayOfYear":19,"month":"JANUARY","monthValue":1,"year":2017,"chronology":{"calendarType":"iso8601","id":"ISO"}},"pre_investigation_comments":"","post_investigation_comments":"See
-        Attached letter.  Reiser is a supervisor for Fresno County CPS.","contact_summary":"LIC
-        9099 dated 11/23/04, 1/3/05&#13;&#10;LIC 812 date of visit 11/23/04, 1/3/05","followup_comments":"","allegations":[{"complaint_code":"3","allegation":"","resolution_code_sub":"","resolution_code_insub":"","resolution_code_unsub":""},{"complaint_code":"3","allegation":"Client
-        Miguel Delatorre (8-28-88)    Miguel was beat up by an older and bigger child
-        at GH. (name unknown) Staff did nothing to stop this.  Staff told Miguel not
-        to say anything. Miguel called his mother and told her this.","resolution_code_sub":"","resolution_code_insub":"","resolution_code_unsub":"U"},{"complaint_code":"3","allegation":"","resolution_code_sub":"","resolution_code_insub":"","resolution_code_unsub":""}]},{"id":"9136","complaint_date":{"hour":0,"minute":0,"nano":0,"second":0,"dayOfMonth":3,"dayOfWeek":"MONDAY","dayOfYear":277,"month":"OCTOBER","monthValue":10,"year":2016,"chronology":{"calendarType":"iso8601","id":"ISO"}},"assigned_worker":"Mullah
-        Mahaboob","control_number":"34-CR-20161003145019","priority_level":"3","status":"Approved","approval_date":{"hour":0,"minute":0,"nano":0,"second":0,"dayOfMonth":19,"dayOfWeek":"THURSDAY","dayOfYear":19,"month":"JANUARY","monthValue":1,"year":2017,"chronology":{"calendarType":"iso8601","id":"ISO"}},"pre_investigation_comments":"","post_investigation_comments":"See
-        Attached letter.  Reiser is a supervisor for Fresno County CPS.","contact_summary":"LIC
-        9099 dated 11/23/04, 1/3/05&#13;&#10;LIC 812 date of visit 11/23/04, 1/3/05","followup_comments":"","allegations":[{"complaint_code":"3","allegation":"","resolution_code_sub":"","resolution_code_insub":"","resolution_code_unsub":""},{"complaint_code":"3","allegation":"Client
-        Miguel Delatorre (8-28-88)    Miguel was beat up by an older and bigger child
-        at GH. (name unknown) Staff did nothing to stop this.  Staff told Miguel not
-        to say anything. Miguel called his mother and told her this.","resolution_code_sub":"","resolution_code_insub":"","resolution_code_unsub":"U"},{"complaint_code":"3","allegation":"","resolution_code_sub":"","resolution_code_insub":"","resolution_code_unsub":""}]}]}}]}}'
+      string: '{"took":0,"timed_out":false,"_shards":{"total":5,"successful":5,"failed":0},"hits":{"total":1,"max_score":4.1692457,"hits":[{"_index":"facilities","_type":"facility","_id":"DL7oFNL0AB","_score":4.1692457,"_source":{"href":null,"id":"DL7oFNL0AB","capacity_last_changed":null,"type":{"id":"711","value":"Foster
+        Family Home"},"name":"Sandy Beach Foster Care Home","licensee_name":"","license_type":null,"assigned_worker":{"id":null,"value":"Kay
+        Riley"},"district_office":{"number":"37","name":"San Diego"},"license_number":null,"status":{"id":"0002","value":"Pending"},"capacity":0,"license_effective_date":null,"original_application_recieved_date":{"year":1996,"month":"APRIL","era":"CE","dayOfMonth":15,"dayOfWeek":"MONDAY","dayOfYear":106,"leapYear":true,"monthValue":4,"chronology":{"calendarType":"iso8601","id":"ISO"}},"last_visit_date":null,"last_deferred_visit_date":null,"email_address":null,"last_visit_reason":null,"last_deferred_visit_reason":null,"county":{"id":"34","value":"Sacramento","lis_code":null},"phones":[{"id":null,"relation":"primary","type":null,"number":"5302223333"},{"id":null,"relation":"alternate","type":null,"number":"5305633333"}],"addresses":[{"id":null,"type":"Residential","address":{"id":null,"longitude":null,"lattitude":null,"deliverable":null,"street_address":"9622
+        Sandstone Drive","city":"San Diego","state":"CA","zip_code":"95819","zip_suffix_code":"1234"}},{"id":null,"type":"Mailing","address":{"id":null,"longitude":null,"lattitude":null,"deliverable":null,"street_address":"230
+        D St.","city":"San Diego","state":"CA","zip_code":"95819","zip_suffix_code":"1234"}}],"visits":null,"annual_visit_year":null,"prelicensing_visit_date":null,"facility_source":"CWS/CMS","children":[{"id":"Ar6kQoF0AB","facilityId":null,"person":{"id":null,"gender":"M","age":29,"ssn":null,"ethnicityId":null,"first_name":"Teddy","last_name":"Wendt","date_of_birth":{"year":1988,"month":"SEPTEMBER","era":"CE","dayOfMonth":11,"dayOfWeek":"SUNDAY","dayOfYear":255,"leapYear":true,"monthValue":9,"chronology":{"calendarType":"iso8601","id":"ISO"}}},"date_of_placement":{"year":1996,"month":"DECEMBER","era":"CE","dayOfMonth":14,"dayOfWeek":"SATURDAY","dayOfYear":349,"leapYear":true,"monthValue":12,"chronology":{"calendarType":"iso8601","id":"ISO"}},"assigned_worker":null,"county_of_origin":"San
+        Diego"}],"inspections":[],"complaints":[]}}]}}'
     http_version: 
-  recorded_at: Thu, 18 Jan 2018 19:23:44 GMT
+  recorded_at: Thu, 18 Jan 2018 19:23:50 GMT
 recorded_with: VCR 3.0.3

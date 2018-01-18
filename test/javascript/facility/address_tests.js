@@ -21,7 +21,7 @@ describe('Verify Facility Address', function () {
           'number': '9494480118'
         },
         {
-          'relation': 'Alternative',
+          'relation': 'alternate',
           'type': 'Cell',
           'number': '9454321234'
         }

@@ -56,6 +56,13 @@ describe('Render Search Inputs', function () {
     expect(searchInputComp.instance().handleChange).toHaveBeenCalledWith('facilityIdValue', 300665437)
   })
 
+  it('verify facility Id accepting alpha characters', () => {
+    let countyField = searchInputComp.find('#facilityIdValue').hostNodes()
+    spyOn(searchInputComp.instance(), 'handleChange').and.callThrough()
+    countyField.simulate('change', {target: {value: 'DL7oFNL0AB'}})
+    expect(searchInputComp.instance().handleChange).toHaveBeenCalledWith('facilityIdValue', 'DL7oFNL0AB')
+  })
+
   it('verify facility Name', () => {
     let countyField = searchInputComp.find('#facilityNameValue').hostNodes()
     spyOn(searchInputComp.instance(), 'handleChange').and.callThrough()

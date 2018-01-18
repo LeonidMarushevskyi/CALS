@@ -72,7 +72,7 @@ export const checkValueForNull = (value) => {
 
 export const primaryPhoneRelation = 'primary'
 
-export const alternativePhoneRelation = 'Alternative'
+export const alternativePhoneRelation = 'alternate'
 
 export const physicalAddressType = 'Residential'
 
