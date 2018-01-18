@@ -18,7 +18,6 @@ import {getDictionaryId, dictionaryNilSelect, checkArrayObjectPresence} from 'he
 import {checkForNameValidation} from 'helpers/cardsHelper.jsx'
 import {urlPrefixHelper} from 'helpers/url_prefix_helper.js.erb'
 import Validator from 'helpers/validator'
-import { PageHeader} from 'react-wood-duck'
 
 export default class Rfa01EditView extends React.Component {
   constructor (props) {
@@ -62,10 +61,10 @@ export default class Rfa01EditView extends React.Component {
     let params = this.state.application
     fetchRequest(url, 'PUT', this.state.application).then(
       response => response.json()).then((response) => {
-        return this.setState({
-          formData: response
-        })
+      return this.setState({
+        formData: response
       })
+    })
       .catch(error => {
         return this.setState({
           data: error

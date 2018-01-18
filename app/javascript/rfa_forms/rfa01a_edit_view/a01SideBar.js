@@ -29,12 +29,12 @@ const A01SideBar = ({
                   text='2. Applicant Residence'
                   href='#applicant-residence-card' />
                 {
-                  hideRelationshipBetweenApplicants === 'hidden' ? null :
-                  <NavLink
-                    active={isNavLinkActive('#relationship-between-applicants-card')}
-                    clickHandler={() => handleNavLinkClick('#relationship-between-applicants-card')}
-                    text='3. Applicant Relationship'
-                    href='#relationship-between-applicants-card' />
+                  hideRelationshipBetweenApplicants === 'hidden' ? null
+                    : <NavLink
+                      active={isNavLinkActive('#relationship-between-applicants-card')}
+                      clickHandler={() => handleNavLinkClick('#relationship-between-applicants-card')}
+                      text='3. Applicant Relationship'
+                      href='#relationship-between-applicants-card' />
                 }
                 <NavLink
                   active={isNavLinkActive('#minor-child-card')}

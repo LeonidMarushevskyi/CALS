@@ -6,7 +6,6 @@ import {checkArrayObjectPresence} from 'helpers/commonHelper'
 import PhoneComponent from './phoneNumberCardsGroup.jsx'
 import AboutApplicant from './aboutApplicantCard.jsx'
 import Employment from './employmentCard.jsx'
-import {checkArrayObjectPresence} from 'helpers/commonHelper'
 
 export default class ApplicantCard extends React.Component {
   constructor (props) {
