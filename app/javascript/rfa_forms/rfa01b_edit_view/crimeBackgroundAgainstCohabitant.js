@@ -45,7 +45,7 @@ export default class CrimeBackgroundAgainstCohabitant extends React.Component {
         textAlignment='left'
         label='Disclosure of Criminal Background - Against Child / Spouse / Cohabitant'
         handleOnClick={() => this.props.setFocusState('crimeBackgroundAgainstCohabitantCard')}
-        focusClassName={this.props.getFocusClassName('crimeBackgroundAgainstCohabitantCard') + ' ' + 'card phone-section double-gap-top'}>
+        focusClassName={this.props.getFocusClassName('crimeBackgroundAgainstCohabitantCard') + ' ' + 'card phone-section double-gap-top active-bar'}>
         <div>
           <div>{Rfa01bCrimeBackGroundAgainstCohabCardText.abuse}</div>
           <div>

@@ -27,7 +27,7 @@ export default class ApplicantCard extends React.Component {
       <div className='cards'>
 
         <div id={idPrefix + 'nameSection'} onClick={() => this.props.setFocusState('NameCard')}
-          className={this.props.getFocusClassName('NameCard') + ' ' + 'card name-section double-gap-top'}>
+          className={this.props.getFocusClassName('NameCard') + ' ' + 'card name-section double-gap-top active-bar'}>
 
           <div className='card-header'>
             <span>Name</span>
@@ -45,7 +45,7 @@ export default class ApplicantCard extends React.Component {
         </div>
 
         <div id={idPrefix + 'aboutAppSection'} onClick={() => this.props.setFocusState('AboutApplicantCard')}
-          className={this.props.getFocusClassName('AboutApplicantCard') + ' ' + 'card aboutApp-section double-gap-top'}>
+          className={this.props.getFocusClassName('AboutApplicantCard') + ' ' + 'card aboutApp-section double-gap-top active-bar'}>
 
           <div className='card-header'>
             <span>More About Applicant</span>
@@ -65,7 +65,7 @@ export default class ApplicantCard extends React.Component {
         </div>
 
         <div id={idPrefix + 'employmentSection'} onClick={() => this.props.setFocusState('EmploymentCard')}
-          className={this.props.getFocusClassName('EmploymentCard') + ' ' + 'card employment-section double-gap-top'}>
+          className={this.props.getFocusClassName('EmploymentCard') + ' ' + 'card employment-section double-gap-top active-bar'}>
 
           <div className='card-header'>
             <span>Employment</span>
@@ -78,7 +78,7 @@ export default class ApplicantCard extends React.Component {
         </div>
 
         <div id={idPrefix + 'phoneSection'} onClick={() => this.props.setFocusState(idPrefix + 'PhoneNumbersCard')}
-          className={this.props.getFocusClassName(idPrefix + 'PhoneNumbersCard') + ' ' + 'card phone-section double-gap-top'}>
+          className={this.props.getFocusClassName(idPrefix + 'PhoneNumbersCard') + ' ' + 'card phone-section double-gap-top active-bar'}>
 
           <div className='card-header'>
             <span>Phone Number</span>

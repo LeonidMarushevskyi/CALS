@@ -17,7 +17,7 @@ export default class DisclosureInstructions extends React.Component {
         textAlignment='left'
         label='Disclosure Instructions (Must read before section II is completed)'
         handleOnClick={() => this.props.setFocusState('DisclosureInstructionsCard')}
-        focusClassName={this.props.getFocusClassName('DisclosureInstructionsCard') + ' ' + 'card phone-section double-gap-top'}
+        focusClassName={this.props.getFocusClassName('DisclosureInstructionsCard') + ' ' + 'card phone-section double-gap-top active-bar'}
         showHeaderLink
         headerToggleId='disclosureInstructionsToggle'
         headerDisplayLink={this.props.disclosureInstructionsDisplay}

@@ -26,7 +26,7 @@ export default class OutOfStateDisclosureCard extends React.Component {
         textAlignment='left'
         label='This section applies only to applicants and adults residing in the home'
         handleOnClick={() => this.props.setFocusState('outOfStateDisclosureCard')}
-        focusClassName={this.props.getFocusClassName('outOfStateDisclosureCard') + ' ' + 'card phone-section double-gap-top'}>
+        focusClassName={this.props.getFocusClassName('outOfStateDisclosureCard') + ' ' + 'card phone-section double-gap-top active-bar'}>
         <div>{Rfa01bOutOfStateDisclosureCardText.lived5years}</div>
         <div>
           <YesNoRadioComponent

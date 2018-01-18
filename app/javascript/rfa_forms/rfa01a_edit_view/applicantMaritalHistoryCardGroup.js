@@ -109,7 +109,7 @@ export default class ApplicantMaritalHistoryCardGroup extends React.Component {
     return (
       <div className='applicant_marital_history_cards'>
         <div id='ApplicantMaritalHistoryCardGroup' onClick={() => this.props.setFocusState('ApplicantMaritalHistoryCardGroup')}
-          className={this.props.getFocusClassName('ApplicantMaritalHistoryCardGroup') + ' ' + 'card phone-section double-gap-top'}>
+          className={this.props.getFocusClassName('ApplicantMaritalHistoryCardGroup') + ' ' + 'card phone-section double-gap-top active-bar'}>
           <div className='card-header'>
             <span>Applicants Marital / Domestic Partnership History</span>
           </div>

@@ -18,7 +18,7 @@ export default class Rfa01BOverview extends React.Component {
         id='Rfa01BOverview'
         label='Rfa-01B Section Summary'
         handleOnClick={() => this.props.setFocusState('Rfa01BOverview')}
-        focusClassName={this.props.getFocusClassName('Rfa01BOverview') + ' ' + 'card phone-section double-gap-top'}>
+        focusClassName={this.props.getFocusClassName('Rfa01BOverview') + ' ' + 'card phone-section double-gap-top active-bar'}>
 
         {applicants && applicants.map((applicant, index) => {
           return (

@@ -51,7 +51,7 @@ export default class ResidenceCards extends React.Component {
     return (
       <div className='residence_cards'>
         <div id='residentAddress' onClick={() => this.props.setFocusState('residentAddress')}
-          className={this.getFocusClassName('residentAddress') + ' ' + 'card resident-section double-gap-top'}>
+          className={this.getFocusClassName('residentAddress') + ' ' + 'card resident-section double-gap-top active-bar'}>
           <div className='card-header'>
             <span> Address</span>
           </div>
@@ -64,7 +64,7 @@ export default class ResidenceCards extends React.Component {
 
         </div>
         <div id='aboutResidence' onClick={() => this.props.setFocusState('aboutResidence')}
-          className={this.getFocusClassName('aboutResidence') + ' ' + 'card about-resident-section double-gap-top'}>
+          className={this.getFocusClassName('aboutResidence') + ' ' + 'card about-resident-section double-gap-top active-bar'}>
           <div className='card-header'>
             <span>About This Residence</span>
           </div>
