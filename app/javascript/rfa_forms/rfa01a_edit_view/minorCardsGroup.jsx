@@ -51,7 +51,7 @@ export default class MinorCardsGroup extends React.Component {
     return (
       <div className='minor_card'>
         <div id='minorsSection' onClick={() => this.props.setFocusState('minorsSection')}
-          className={getFocusClassName('minorsSection') + ' ' + 'card minors-section double-gap-top'}>
+          className={this.props.getFocusClassName('minorsSection') + ' ' + 'card minors-section double-gap-top'}>
           <div className='card-header'>
             <span>Other Information</span>
           </div>

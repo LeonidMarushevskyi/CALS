@@ -163,3 +163,12 @@
   padding: 0px;
   margin-top: -2.3rem;
 }
+
+hr.vertical
+{
+   width: 0px;
+   height: 100vh;
+   border-left: 1px solid gray;
+   display: inline-block;
+   margin: 0 auto;
+}
