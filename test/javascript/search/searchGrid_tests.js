@@ -22,6 +22,7 @@ describe('Render Search results to Grid', function () {
         fac_mail_zip_code: '95350',
         name: "DEPUTY DOG'S GROUP HOME",
         license_number: 193600008,
+        id: 193600008,
         fac_orig_appl_rec_date: '1983-02-02',
         addresses: [
           {

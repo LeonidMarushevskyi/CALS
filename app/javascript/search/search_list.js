@@ -1,18 +1,16 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import {urlPrefixHelper} from '../helpers/url_prefix_helper.js.erb'
-import {checkForNA, checkValueForNull, respectiveFullAddressOrNA, respectiveNumberOrNA} from './common/commonUtils'
+import {checkForNA, checkValueForNull, respectiveFullAddressOrNA, respectiveNumberOrNA,
+  primaryPhoneRelation, alternativePhoneRelation, physicalAddressType} from './common/commonUtils'
 
 export default class SearchList extends React.Component {
   render () {
     const searchResult = this.props.searchResults
-    const primaryPhoneRelation = 'primary'
-    const alternativePhoneRelation = 'Alternative'
-    const physicalAddressType = 'Residential'
     const resultTable = searchResult.map((result, index) => {
       return (
         <tr key={index}>
-          <td><a href={urlPrefixHelper('/facilities/' + result.license_number)}>{result.name}</a></td>
+          <td><a href={urlPrefixHelper('/facilities/' + result.id)}>{result.name}</a></td>
           <td>{result.license_number}</td>
           <td>{checkForNA(result.type) + ' / ' + checkValueForNull(result.facility_source)}</td>
           <td>{checkForNA(result.status)}</td>

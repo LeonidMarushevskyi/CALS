@@ -1,27 +1,47 @@
 import React from 'react'
 import FacilityComplaints from '../../../app/javascript/facility/complaints.jsx'
-import ShallowRenderer from 'react-test-renderer/shallow'
+import {mount} from 'enzyme'
 
-describe('Facility Complaints Section', function () {
+describe('Verify Complaints Component', function () {
   const props = {
     facilityData: {
-      complaints: [
+      'count': 3,
+      'complaints': [
         {
-          approval_date: '2010-03-05',
-          assigned_worker: 'Jan Doe',
-          complaint_date: '2010-02-03',
-          control_number: '12-CR20161205112053',
-          id: null,
-          priority_level: 2,
-          status: 'Pending'
+          'id': 'dlf0245',
+          'complaint_date': '2016-09-27 00:00:00',
+          'assigned_worker': 'Harry Potter',
+          'control_number': '19-CR-20160927081411',
+          'priority_level': '2',
+          'status': 'Approved',
+          'approval_date': '2016-12-10 00:00:00'
         }
       ]
     }
   }
-  const renderComplaints = new ShallowRenderer()
-  const complaintsComp = renderComplaints.render(<FacilityComplaints {...props} />)
-  const resultComp = complaintsComp
-  it('Verify Facility Complaints Table', function () {
-    expect(resultComp.props.className).toBe('facility-children col-xs-12 col-sm-12 col-md-12 col-lg-12')
+  const renderComplaintsComp = mount(<FacilityComplaints {...props} />)
+  it('check Complaints table', () => {
+    expect(renderComplaintsComp.length).toBe(1)
+  })
+  it('Verify Complaint ID', function () {
+    expect(renderComplaintsComp.find('td[data-label="id"]').props().children[1]).toBe('dlf0245')
+  })
+  it('Verify complaint date', function () {
+    expect(renderComplaintsComp.find('td[data-label="complaint date"]').props().children[1]).toBe('2016-09-27 00:00:00')
+  })
+  it('Verify assigned worker full name', function () {
+    expect(renderComplaintsComp.find('td[data-label="assigned worker"]').props().children[1]).toBe('Harry Potter')
+  })
+  it('Verify complaint control number', function () {
+    expect(renderComplaintsComp.find('td[data-label="control number"]').props().children[1]).toBe('19-CR-20160927081411')
+  })
+  it('Verify priority level', function () {
+    expect(renderComplaintsComp.find('td[data-label="priority level"]').props().children[1]).toBe('2')
+  })
+  it('Verify complaint status', function () {
+    expect(renderComplaintsComp.find('td[data-label="status"]').props().children[1]).toBe('Approved')
+  })
+  it('Verify complaint approval date', function () {
+    expect(renderComplaintsComp.find('td[data-label="approval date"]').props().children[1]).toBe('2016-12-10 00:00:00')
   })
 })

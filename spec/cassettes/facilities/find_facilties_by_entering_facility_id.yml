@@ -1,0 +1,47 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://calsapi.preint.cwds.io/dictionaries/counties
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Content-type:
+      - application/json
+      Authorization:
+      - "..zLC5YHMkUgTUpxEq.V8oivGbZzrYpLFnZUm7ojhO5emfTS6o7IHPhCd47yzJtdcoBrFjK2IfRkKApEBWrVATgcRtBwdZDuGrUIuELvhSLFBUh-z6HnamssFu9TG7Jyb6jIPJYi_wtexGjPWSNJxwuVB-yLsO4MPxEAov4Bd_ROACjmpcKqH9OzjKd7ygcPXf_CMwYbOfGLJfKI_1fZU1V3rMhGdZXbykMFp1ppp6TCD6XfXqftuStf-X8lJLb7Y1aTrkFGkug0QB5JOfHwgTBatP28ReDPqrF5BEQA5xzl_-kJV5hPOIZkqkc_BFULRT6j1oYcCTThRTIGyk8Pgxlyq1UqZCOn7qPqePtw1G2m9dqvGuzgkBfF41I0we_83OQBoxApgmcGSG8bJXlC-6qRh_fofcGy2fM0GTYwYPrv-4u02AnGyd0hUIo7z7wCYAMU4HOr9ZCXfEXTJXCA61GgXWWh-wj1nLqujWT0fNmjlxeu-4CBYyf4X3jlsyaKkt2kGoRneJ8EyJcX6nXOq7y-bw2z9mNdrW_vy_h_l__fO46vOcEqZNgPoYO3hjtoalVVz-uKIN405sEXN6Z0aPB9mDTxmaupJA1kfIRh0KxXBHj2ezPp04KPIoI0JX5X33QGJ1WglxgXHnn4OQiAz4Y4Zg7SuPk7--vCOtcL6zsZxAn-MnoR4SwnM8sC8RlKQuSBSTQViPheAuvxAoh-gbghAYObauNRznrYcW2CL-TXg4FIsAR66eQrLA359qDeIH_ThBx0fmBsUD1LQQDZPY6xjLEe8RFb_Ne8GSfV2PfJy7cJHTXzx-ecDMWVqw-JfrFxdB8i70OG5NWmj5P_ClQi9lqNo7qMqjJUqWf8KbQ9tG-doh_LUxGx7ycQUxBB-OmwQpvuo965hYI5iM9mX8t3IGZVqswo4TD3FpIXqXS3c8VwgxQpQ6qcQtC1X8Yb-NTZQPhl348LSlqiI01ooTs4Dq77_WoafJZ-Tdpow0IpFZCuXURiRsa78x0YQ.ZMnXYVfWHvE6n0dxtMZlVA"
+  response:
+    status:
+      code: 401
+      message: 
+    headers:
+      cache-control:
+      - must-revalidate,no-cache,no-store
+      content-type:
+      - text/html;charset=iso-8859-1
+      date:
+      - Wed, 17 Jan 2018 22:14:30 GMT
+      set-cookie:
+      - rememberMe=deleteMe; Path=/; Max-Age=0; Expires=Tue, 16-Jan-2018 22:14:30
+        GMT
+      content-length:
+      - '265'
+      connection:
+      - keep-alive
+    body:
+      encoding: UTF-8
+      string: |
+        <html>
+        <head>
+        <meta http-equiv="Content-Type" content="text/html;charset=utf-8"/>
+        <title>Error 401 Token not valid</title>
+        </head>
+        <body><h2>HTTP ERROR 401</h2>
+        <p>Problem accessing /dictionaries/counties. Reason:
+        <pre>    Token not valid</pre></p>
+        </body>
+        </html>
+    http_version: 
+  recorded_at: Wed, 17 Jan 2018 22:14:30 GMT
+recorded_with: VCR 3.0.3

@@ -1,12 +1,12 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import {SmallInnerBlockDetails} from './smallInnerBlockDetails.js'
-import {checkForNA, checkValueForNull, checkforDateOrNa} from '../search/common/commonUtils'
+import {checkForNA, checkValueForNull, checkforDateOrNa, checkNameorNA} from '../search/common/commonUtils'
 
 export default class FacilityDetails extends React.Component {
   render () {
     const result = this.props.facilityData
-    const licenseEffectiveDate = result.status.value === ('Pending' || 'Probationary License') ? 'N/A' : (checkValueForNull(result.license_effective_date))
+    const licenseEffectiveDate = checkForNA(result.status) === ('Pending' || 'Probationary License') ? 'N/A' : (checkValueForNull(result.license_effective_date))
     return (
       <div className='facility-details grid_view col-xs-12 col-sm-12 col-md-12 col-lg-12'>
         <div>
@@ -34,7 +34,7 @@ export default class FacilityDetails extends React.Component {
               <SmallInnerBlockDetails
                 classNameTitle={''}
                 title='ASSIGNED OVERSIGHT AGENCY'
-                value={result.district_office.name} />
+                value={checkNameorNA(result.district_office)} />
             </div>
           </div>
           <div className='col-xs-12 col-sm-4 col-md-4 col-lg-4'>
@@ -46,7 +46,7 @@ export default class FacilityDetails extends React.Component {
               <SmallInnerBlockDetails
                 classNameTitle=''
                 title='LICENSE STATUS'
-                value={result.status.value} />
+                value={checkForNA(result.status)} />
               <SmallInnerBlockDetails
                 classNameTitle=''
                 title='CAPACITY / CAPACITY LAST CHANGED'

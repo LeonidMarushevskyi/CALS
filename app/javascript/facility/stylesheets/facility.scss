@@ -162,17 +162,6 @@
 {
     background-color: #f5f5f5;
 }
-.phone_primary
-{
-    display: inline;
-    float: left;
-
-    margin-right: 20px;
-}
-.phone_alt
-{
-    display: inline-block;
-}
 @media only screen and (max-width: 787px)
 {
     .facility_blocks > div
@@ -185,18 +174,6 @@
         margin-bottom: 20px;
         padding-left: 0;
     }
-    .phone_primary
-    {
-        display: block;
-        float: none;
-
-        margin-right: 0px;
-    }
-    .phone_alt
-    {
-        display: block;
-    }
-
     .facility-address .inner_block
     {
         padding: 0px 0px 0px 0px;

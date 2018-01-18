@@ -2,6 +2,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import Immutable from 'immutable'
 import NameCard from './nameCard'
+import {checkArrayObjectPresence} from 'helpers/commonHelper'
 import PhoneComponent from './phoneNumberCardsGroup.jsx'
 import AboutApplicant from './aboutApplicantCard.jsx'
 import Employment from './employmentCard.jsx'
@@ -87,7 +88,7 @@ export default class ApplicantCard extends React.Component {
             idPrefix={idPrefix}
             phoneTypes={this.props.phoneTypes}
             applicant_id={this.props.index}
-            phones={this.props.applicantFields.phones || undefined}
+            phones={checkArrayObjectPresence(this.props.applicantFields.phones) || undefined}
             setParentState={this.setApplicantState}
             validator={this.props.validator}
             errors={this.props.errors.phones} />
