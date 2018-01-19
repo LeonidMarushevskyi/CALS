@@ -172,3 +172,35 @@ hr.vertical
    display: inline-block;
    margin: 0 auto;
 }
+
+
+//The link which when clicked opens the collapsable area
+.Collapsible__trigger {
+  display: block;
+  position: relative;
+  h1 {
+   margin-bottom: 10px;
+   text-align:center;
+ }
+
+  &:after {
+    font-family: 'FontAwesome';
+    content: '\f107';
+    position: absolute;
+    left: 10px;
+    top: 5px;
+    display: inline-block;
+    transition: transform 300ms;
+  }
+
+  &.is-open {
+    &:after {
+      transform: rotateZ(180deg);
+    }
+  }
+
+  &.is-disabled {
+    opacity: 0.5;
+    background-color: grey;
+  }
+}

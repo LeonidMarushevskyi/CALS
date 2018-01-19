@@ -9,13 +9,11 @@ describe('RFA 01a side bar ', () => {
   beforeEach(() => {
     component = mount(<A01SideBar
       hideRelationshipBetweenApplicants='hidden'
-      activeNavLinkHref=''
       isNavLinkActive={isNavLinkActiveSpy}
       handleNavLinkClick={handleNavLinkClickSpy}
     />)
     noHiddenRelationshipNavcomponent = mount(<A01SideBar
       hideRelationshipBetweenApplicants={false}
-      activeNavLinkHref=''
       isNavLinkActive={isNavLinkActiveSpy}
       handleNavLinkClick={handleNavLinkClickSpy}
     />)

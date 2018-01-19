@@ -8,7 +8,6 @@ import {NavLinks, NavLink} from 'react-wood-duck'
 const A01SideBar = ({
   isNavLinkActive,
   handleNavLinkClick,
-  activeNavLinkHref,
   hideRelationshipBetweenApplicants
 }) => {
   return (
@@ -16,7 +15,7 @@ const A01SideBar = ({
       <div className='col-lg-10' >
         <Affix>
           <div className='side-bar' aria-label='Side Bar'>
-            <Collapsible trigger={<h1>Rfa 01 A</h1>} open>
+            <Collapsible trigger={<h1>RFA 01 A</h1>} open>
               <NavLinks>
                 <NavLink
                   active={isNavLinkActive('#applicants-card')}
@@ -80,8 +79,9 @@ const A01SideBar = ({
   )
 }
 
-A01SideBar.defaultProps = {
-  activeNavLinkHref: ''
+A01SideBar.propTypes = {
+  isNavLinkActive: PropTypes.func,
+  handleNavLinkClick: PropTypes.func,
+  hideRelationshipBetweenApplicant: PropTypes.bool
 }
-
 export default A01SideBar

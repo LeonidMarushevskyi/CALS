@@ -120,7 +120,6 @@ export default class Rfa01EditView extends React.Component {
           <div className='left-content col-xs-3 col-sm-3 col-md-3 col-lg-3'>
             <A01SideBar
               hideRelationshipBetweenApplicants={hideRelationshipBetweenApplicants}
-              activeNavLinkHref={this.state.activeNavLinkHref}
               isNavLinkActive={this.isNavLinkActive}
               handleNavLinkClick={this.handleNavLinkClick} />
           </div>
