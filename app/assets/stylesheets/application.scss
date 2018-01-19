@@ -7,6 +7,10 @@
 @import 'react-wood-duck/dist/styles/application.scss';
 @import 'react-select/dist/react-select.css';
 
+.active-bar {
+  border-left: 0.7rem solid transparent;
+}
+
 /*
  * This is a manifest file that'll be compiled into application.css, which will include all the files
  * listed below.

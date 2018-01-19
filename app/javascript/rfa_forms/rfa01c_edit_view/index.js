@@ -10,7 +10,6 @@ import CardsGroupLayout from 'components/common/cardsGroupLayout'
 import PageTemplate from 'components/common/pageTemplate'
 
 import {getCountyValue, checkArrayObjectPresence, dictionaryNilSelect} from 'helpers/commonHelper.jsx'
-import '../rfa01b_edit_view/stylesheets/cards-01b.scss'
 import Button from 'components/common/button'
 export default class Rfa01cList extends React.Component {
   constructor (props) {

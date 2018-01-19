@@ -15,7 +15,6 @@ import {getDictionaryId, dictionaryNilSelect, checkArrayObjectPresence} from 'he
 import CardsGroupLayout from 'components/common/cardsGroupLayout.js'
 import {addCardAsJS, getFocusClassName, removeCard} from 'helpers/cardsHelper.jsx'
 import Validator from 'helpers/validator'
-import './stylesheets/cards-01b.scss'
 
 export default class Rfa01bList extends React.Component {
   constructor (props) {

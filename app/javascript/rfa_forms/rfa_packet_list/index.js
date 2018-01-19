@@ -5,7 +5,6 @@ import Rfa01COverview from './rfa01cOverview'
 import Lic198BOverview from './lic198bOverview'
 import CardsGroupLayout from 'components/common/cardsGroupLayout'
 import {checkArrayObjectPresence} from 'helpers/commonHelper.jsx'
-import '../rfa01b_edit_view/stylesheets/cards-01b.scss'
 
 export default class Rfa01PacketList extends React.Component {
   constructor (props) {
