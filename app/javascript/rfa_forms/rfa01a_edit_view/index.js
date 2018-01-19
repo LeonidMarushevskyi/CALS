@@ -11,6 +11,7 @@ import RelationshipBetweenApplicantsCardMain from './relationshipBetweenApplican
 import ApplicantMaritalHistoryCardGroup from './applicantMaritalHistoryCardGroup'
 import ChildDesiredMain from './childDesiredMain'
 import {CountyUseOnlyCard} from 'components/rfa_forms/countyUseOnlyCard.js'
+import A01SideBar from './a01SideBar'
 import './stylesheets/cards-main.scss'
 import {fetchRequest} from 'helpers/http'
 import {getDictionaryId, dictionaryNilSelect, checkArrayObjectPresence} from 'helpers/commonHelper.jsx'
@@ -27,9 +28,12 @@ export default class Rfa01EditView extends React.Component {
     this.setFocusState = this.setFocusState.bind(this)
     this.validator = new Validator({})
     this.validator.validateFieldSetErrorState = this.validateFieldSetErrorState.bind(this)
+    this.handleNavLinkClick = this.handleNavLinkClick.bind(this)
+    this.isNavLinkActive = this.isNavLinkActive.bind(this)
 
     this.state = {
       focusComponentName: '',
+      activeNavLinkHref: '',
       application: this.props.application,
       disableSave: !(checkForNameValidation(this.props.application.applicants)),
       errors: {}
@@ -98,6 +102,14 @@ export default class Rfa01EditView extends React.Component {
     return this.state.focusComponentName === componentName ? 'edit' : 'show'
   }
 
+  handleNavLinkClick (href) {
+    this.setState({ activeNavLinkHref: href })
+  }
+
+  isNavLinkActive (href) {
+    return this.state.activeNavLinkHref === href
+  }
+
   render () {
     const hideRelationshipBetweenApplicants = this.state.application.applicants !== null && this.state.application.applicants.length === 2 ? 'cards-section' + 'col-xs-12 col-sm-12 col-md-12 col-lg-12' : 'hidden'
     const countyValue = getDictionaryId(this.state.application.application_county) || (this.props.user && this.props.user.county_code)
@@ -105,7 +117,13 @@ export default class Rfa01EditView extends React.Component {
     return (
       <div className='main_page'>
         <div className='form-section col-xs-12 col-sm-12 col-md-12 col-lg-12'>
-          <div className='left-content col-xs-9 col-sm-9 col-md-9 col-lg-9'>
+          <div className='left-content col-xs-3 col-sm-3 col-md-3 col-lg-3'>
+            <A01SideBar
+              hideRelationshipBetweenApplicants={hideRelationshipBetweenApplicants}
+              isNavLinkActive={this.isNavLinkActive}
+              handleNavLinkClick={this.handleNavLinkClick} />
+          </div>
+          <div className='right-content col-xs-9 col-sm-9 col-md-9 col-lg-9'>
             <div className='col-xs-12 col-sm-12 col-md-12 col-lg-12'>
               <div className='col-xs-10 col-sm-10 col-md-10 col-lg-10'>
                 <h1 className='page-header'>Resource Family Applications (RFA 01A)</h1>
@@ -145,10 +163,10 @@ export default class Rfa01EditView extends React.Component {
               getFocusClassName={this.getFocusClassName}
               hasValidName={this.state.disableSave}
               validator={this.validator}
-              errors={this.state.errors.applicants}
-            />
+              errors={this.state.errors.applicants} />
 
-            <div className='cards-section col-xs-12 col-sm-12 col-md-12 col-lg-12'>
+            <div className='cards-section col-xs-12 col-sm-12 col-md-12 col-lg-12'
+              id='applicant-residence-card'>
               <h3>II. Applicant (S) - <span>Residence</span></h3>
               <ResidenceCards
                 focusComponentName={this.state.focusComponentName}
@@ -160,7 +178,8 @@ export default class Rfa01EditView extends React.Component {
                 setParentState={this.setApplicationState} />
             </div>
 
-            <div className={hideRelationshipBetweenApplicants}>
+            <div className={hideRelationshipBetweenApplicants}
+              id='relationship-between-applicants-card'>
               <h3>III.<span>Relationship Between Applicant</span></h3>
               <RelationshipBetweenApplicantsCardMain
                 focusComponentName={this.state.focusComponentName}
@@ -175,12 +194,13 @@ export default class Rfa01EditView extends React.Component {
                 applicants={this.state.application.applicants || []} />
             </div>
 
-            <div className='cards-section col-xs-12 col-sm-12 col-md-12 col-lg-12'>
+            <div className='cards-section col-xs-12 col-sm-12 col-md-12 col-lg-12'
+              id='minor-child-card'>
               <h3>IV. <span>Minor Children Residing in the Home</span></h3>
               <MinorCardsGroup
                 genderTypes={this.props.genderTypes}
                 relationshipToApplicantTypes={this.props.relationshipToApplicantTypes}
-                focusComponentName={this.state.focusComponentName}
+                getFocusClassName={this.getFocusClassName}
                 setFocusState={this.setFocusState}
                 setParentState={this.setApplicationState}
                 validator={this.validator}
@@ -189,11 +209,12 @@ export default class Rfa01EditView extends React.Component {
                 minorChildren={this.state.application.minorChildren || undefined} />
             </div>
 
-            <div className='cards-section col-xs-12 col-sm-12 col-md-12 col-lg-12'>
+            <div className='cards-section col-xs-12 col-sm-12 col-md-12 col-lg-12'
+              id='other-adults-card'>
               <h3>V.<span>Other Adults Residing or Regularly Present in the Home</span></h3>
               <p> Each adult residing or regularly present in the home must complete a Criminal Record Statement RFA 01B</p>
               <OtherAdultsCard
-                focusComponentName={this.state.focusComponentName}
+                getFocusClassName={this.getFocusClassName}
                 setFocusState={this.setFocusState}
                 setParentState={this.setApplicationState}
                 validator={this.validator}
@@ -203,7 +224,8 @@ export default class Rfa01EditView extends React.Component {
                 relationship_types={this.props.relationshipToApplicantTypes} />
             </div>
 
-            <div className='cards-section col-xs-12 col-sm-12 col-md-12 col-lg-12'>
+            <div className='cards-section col-xs-12 col-sm-12 col-md-12 col-lg-12'
+              id='marital-history-card'>
               <h3>VI.<span>Applicant's Marital History</span></h3>
               <ApplicantMaritalHistoryCardGroup
                 focusComponentName={this.state.focusComponentName}
@@ -223,7 +245,8 @@ export default class Rfa01EditView extends React.Component {
                 errors={this.state.errors.applicantsHistory} />
             </div>
 
-            <div className='cards-section col-xs-12 col-sm-12 col-md-12 col-lg-12'>
+            <div className='cards-section col-xs-12 col-sm-12 col-md-12 col-lg-12'
+              id='child-desired-card'>
               <h3>VII.<span>Child Desired </span></h3>
               <ChildDesiredMain
                 focusComponentName={this.state.focusComponentName}
@@ -232,11 +255,11 @@ export default class Rfa01EditView extends React.Component {
                 setFocusState={this.setFocusState}
                 setParentState={this.setApplicationState}
                 siblingGroups={this.props.siblingGroups}
-                ageGroups={this.props.ageGroups}
-              />
+                ageGroups={this.props.ageGroups} />
             </div>
 
-            <div className='cards-section col-xs-12 col-sm-12 col-md-12 col-lg-12'>
+            <div className='cards-section col-xs-12 col-sm-12 col-md-12 col-lg-12'
+              id='foster-care-card'>
               <h3>VIII. Foster Care / Adoption / Licensure History</h3>
               <FosterCareHistoryCardMain
                 focusComponentName={this.state.focusComponentName}
@@ -244,32 +267,23 @@ export default class Rfa01EditView extends React.Component {
                 getFocusClassName={this.getFocusClassName}
                 setParentState={this.setApplicationState}
                 setFocusState={this.setFocusState}
-                {...this.props}
-              />
+                {...this.props} />
             </div>
-            <div className='cards-section col-xs-12 col-sm-12 col-md-12 col-lg-12'>
-              <div>
-                <h3>IX. References</h3>
-                <ReferencesMain
-                  focusComponentName={this.state.focusComponentName}
-                  setParentState={this.setApplicationState}
-                  getFocusClassName={this.getFocusClassName}
-                  setFocusState={this.setFocusState}
-                  stateTypes={this.props.stateTypes}
-                  references={this.state.application.references || undefined}
-                  suffixTypes={this.props.suffixTypes}
-                  prefixTypes={this.props.prefixTypes}
-                  nameTypes={this.props.nameTypes}
-                  validator={this.validator}
-                  errors={this.state.errors.reference}
-                />
-              </div>
-            </div>
-          </div>
-
-          <div className='right-content col-xs-3 col-sm-3 col-md-3 col-lg-3'>
-            <div className='right-inner-content'>
-              <img className='' src='http://via.placeholder.com/280x650' />
+            <div className='cards-section col-xs-12 col-sm-12 col-md-12 col-lg-12'
+              id='reference-card'>
+              <h3>IX. References</h3>
+              <ReferencesMain
+                focusComponentName={this.state.focusComponentName}
+                setParentState={this.setApplicationState}
+                getFocusClassName={this.getFocusClassName}
+                setFocusState={this.setFocusState}
+                stateTypes={this.props.stateTypes}
+                references={this.state.application.references || undefined}
+                suffixTypes={this.props.suffixTypes}
+                prefixTypes={this.props.prefixTypes}
+                nameTypes={this.props.nameTypes}
+                validator={this.validator}
+                errors={this.state.errors.reference} />
             </div>
           </div>
         </div>

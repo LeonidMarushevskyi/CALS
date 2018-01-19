@@ -31,11 +31,11 @@ describe('Verify Child Desired Component', () => {
     />)
   })
   it('verify component load', () => {
-    let componentId = childDesiredComp.find('#DesiredChildSection')
+    let componentId = childDesiredComp.find('#ChildDesiredMain')
     expect(componentId.length).toBe(1)
   })
   it('verify focus component', () => {
-    let componentId = childDesiredComp.find('#DesiredChildSection')
+    let componentId = childDesiredComp.find('#ChildDesiredMain')
     componentId.simulate('click')
     expect(setFocusStateSpy).toHaveBeenCalledWith('ChildDesiredMain')
   })

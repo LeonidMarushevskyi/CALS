@@ -49,7 +49,7 @@ export default class ApplicantCardsGroup extends React.Component {
             applicantsList.map((applicantFields, index) => {
               if (!applicantFields.to_delete) {
                 return (
-                  <div key={index}>
+                  <div key={index} id='applicants-card'>
                     <h3>I. Applicant {String(index + 1)} - <span>Information</span></h3>
                     {(index > 0) && <a onClick={() => this.onApplicantClickClose(index)} className='pull-right applicant-list-remove-btn'>Remove</a>}
                     <ApplicantCard
