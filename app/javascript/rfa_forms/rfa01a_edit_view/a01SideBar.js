@@ -12,7 +12,7 @@ const A01SideBar = ({
   hideRelationshipBetweenApplicants
 }) => {
   return (
-    <div className='col-lg-12 hide-mobile'>
+    <div className='col-lg-12'>
       <div className='col-lg-10' >
         <Affix>
           <div className='side-bar' aria-label='Side Bar'>
