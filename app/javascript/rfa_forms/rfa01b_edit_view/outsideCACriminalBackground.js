@@ -36,7 +36,7 @@ export default class OutsideCACriminalBackground extends React.Component {
 
   render () {
     const convictedInAnotherState = String(this.props.convictedInAnotherState)
-    const disclosures = checkArrayObjectPresence(this.props.disclosures) || [disclosureDefaults]
+    const disclosures = this.props.disclosures
     return (
       <CardLayout
         idClassName='outside_ca_criminal_background'

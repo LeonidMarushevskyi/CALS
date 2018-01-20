@@ -15,7 +15,7 @@ import {getDictionaryId, dictionaryNilSelect, checkArrayObjectPresence} from 'he
 import CardsGroupLayout from 'components/common/cardsGroupLayout.js'
 import {addCardAsJS, getFocusClassName, removeCard} from 'helpers/cardsHelper.jsx'
 import Validator from 'helpers/validator'
-
+import {disclosureDefaults} from 'constants/defaultFields'
 // import '../rfa01a_edit_view/stylesheets/cards-main.scss'
 
 export default class Rfa01bList extends React.Component {
@@ -158,7 +158,7 @@ export default class Rfa01bList extends React.Component {
             <CardsGroupLayout>
               <CaliforniaCriminalBackground
                 convictedInCalifornia={this.state.application.convicted_in_california}
-                disclosures={this.state.application.convicted_in_california_disclosures}
+                disclosures={checkArrayObjectPresence(this.state.application.convicted_in_california_disclosures) || [disclosureDefaults]}
                 focusComponentName={this.state.focusComponentName}
                 getFocusClassName={this.getFocusClassName}
                 setFocusState={this.setFocusState}
@@ -169,7 +169,7 @@ export default class Rfa01bList extends React.Component {
             <CardsGroupLayout>
               <OutsideCACriminalBackground
                 convictedInAnotherState={this.state.application.convicted_in_another_state}
-                disclosures={this.state.application.convicted_in_another_state_disclosures}
+                disclosures={checkArrayObjectPresence(this.state.application.convicted_in_another_state_disclosures) || [disclosureDefaults]}
                 focusComponentName={this.state.focusComponentName}
                 getFocusClassName={this.getFocusClassName}
                 setFocusState={this.setFocusState}
@@ -180,7 +180,7 @@ export default class Rfa01bList extends React.Component {
             <CardsGroupLayout>
               <CrimeBackgroundAgainstCohabitant
                 arrestedForCrime={this.state.application.arrested_for_crime}
-                disclosures={this.state.application.arrested_for_crime_disclosures}
+                disclosures={checkArrayObjectPresence(this.state.application.arrested_for_crime_disclosures) || [disclosureDefaults]}
                 focusComponentName={this.state.focusComponentName}
                 getFocusClassName={this.getFocusClassName}
                 setFocusState={this.setFocusState}

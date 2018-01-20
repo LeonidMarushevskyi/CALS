@@ -5,23 +5,12 @@ import Immutable from 'immutable'
 import CriminalFields from './criminalFields'
 import {DropDownField} from 'components/common/dropDownField'
 import YesNoRadioComponent from 'components/common/yesNoFields'
-
+import {disclosureDefaults} from 'constants/defaultFields'
 import CardLayout from 'components/common/cardLayout'
 import Button from 'components/common/button'
 import {Rfa01bCaliforniaCriminalBackGroundCardText} from 'constants/rfaText'
 import {addCardAsJS, removeCard} from 'helpers/cardsHelper.jsx'
 import {checkArrayObjectPresence} from 'helpers/commonHelper.jsx'
-
-const disclosureDefaults = Object.freeze({
-  'offense': '',
-  'offense_city': '',
-  'offense_state': {
-    value: 'California',
-    id: 'CA'},
-  'offense_date': '',
-  'when_offense_happen': '',
-  'offense_details': ''
-})
 
 export default class CaliforniaCriminalBackground extends React.Component {
   constructor (props) {
@@ -46,7 +35,7 @@ export default class CaliforniaCriminalBackground extends React.Component {
 
   render () {
     const convictedInCalifornia = String(this.props.convictedInCalifornia)
-    const disclosures = checkArrayObjectPresence(this.props.disclosures) || [disclosureDefaults]
+    const disclosures = this.props.disclosures
     return (
 
       <CardLayout
