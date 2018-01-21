@@ -54,7 +54,7 @@ describe('Name Card Component', () => {
   it('renders Only Default Name Fields and Button', () => {
     expect(renderedDom.children.length).toEqual(2)
   })
-  it('Verify Add Another Name Click', () => {
+  it('Verify Add Alias Click', () => {
     let addNameBtn = renderedDom.children[1].children[0]
     TestUtils.Simulate.click(addNameBtn)
     expect(setCardState.calledOnce).toBe(true)
