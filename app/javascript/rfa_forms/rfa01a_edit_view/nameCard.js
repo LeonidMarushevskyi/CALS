@@ -101,7 +101,7 @@ export default class NameCard extends React.Component {
           })
         }
         <div className='text-center'>
-          <button disabled={this.props.hasValidName} onClick={this.addCard} className='btn btn-default'>Add another Name +</button>
+          <button disabled={this.props.hasValidName} onClick={this.addCard} className='btn btn-default'>Add Alias +</button>
         </div>
       </div>
     )
