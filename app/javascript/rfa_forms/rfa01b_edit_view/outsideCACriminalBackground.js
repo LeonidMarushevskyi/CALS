@@ -44,7 +44,7 @@ export default class OutsideCACriminalBackground extends React.Component {
         textAlignment='left'
         label='Disclosure of Criminal Background - Outside of California'
         handleOnClick={() => this.props.setFocusState('OutsideCACriminalBackgroundCard')}
-        focusClassName={this.props.getFocusClassName('OutsideCACriminalBackgroundCard') + ' ' + 'card phone-section double-gap-top'}>
+        focusClassName={this.props.getFocusClassName('OutsideCACriminalBackgroundCard') + ' ' + 'card phone-section double-gap-top active-bar'}>
         <div>
           <div>{Rfa01bOutsideCACriminalBackgroundCardText.otherStateConviction}</div>
           <div>{Rfa01bOutsideCACriminalBackgroundCardText.californiaConviction}</div>

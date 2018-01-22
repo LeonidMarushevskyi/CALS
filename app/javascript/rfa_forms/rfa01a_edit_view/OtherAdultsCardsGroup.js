@@ -47,7 +47,7 @@ export default class OtherAdultsCardsGroup extends React.Component {
     return (
       <div className='other_adults_card'>
         <div id='otherAdultsSection' onClick={() => this.props.setFocusState('otherAdultsSection')}
-          className={this.props.getFocusClassName('otherAdultsSection') + ' ' + 'card other-adults-section double-gap-top'}>
+          className={this.props.getFocusClassName('otherAdultsSection') + ' ' + 'card other-adults-section double-gap-top active-bar'}>
           <div className='card-header'>
             <span>Other Information</span>
           </div>

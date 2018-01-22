@@ -35,7 +35,7 @@ export default class RelationshipBetweenApplicantsCard extends React.Component {
     return (
       <div className='relationship_between_applicants_card'>
         <div id='RelationshipBetweenApplicantsCardSection' onClick={() => this.props.setFocusState('RelationshipBetweenApplicantsCard')}
-          className={this.props.getFocusClassName('RelationshipBetweenApplicantsCard') + ' ' + 'card phone-section double-gap-top'}>
+          className={this.props.getFocusClassName('RelationshipBetweenApplicantsCard') + ' ' + 'card phone-section double-gap-top active-bar'}>
           <div className='card-header'><span>Relationships</span></div>
           <div className='card-body'>
             <div className='row'>

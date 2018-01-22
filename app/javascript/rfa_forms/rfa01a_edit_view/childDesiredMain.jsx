@@ -31,7 +31,7 @@ export default class ChildDesiredMain extends React.Component {
     return (
       <div className='desired_child_card'>
         <div id='ChildDesiredMain' onClick={() => this.props.setFocusState('ChildDesiredMain')}
-          className={this.props.getFocusClassName('ChildDesiredMain') + ' ' + 'card phone-section double-gap-top'}>
+          className={this.props.getFocusClassName('ChildDesiredMain') + ' ' + 'card phone-section double-gap-top active-bar'}>
           <div className='card-header'><span>Information About the Child(ren)</span></div>
           <div className='card-body'>
             <div className='row'>

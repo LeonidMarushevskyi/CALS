@@ -8,7 +8,7 @@ export default class FosterCareHistoryCard extends React.Component {
     return (
       <div className='foster_care_history_cards'>
         <div id='FosterCareHistorySection' onClick={() => this.props.setFocusState('FosterCareHistoryCard')}
-          className={this.props.getFocusClassName('FosterCareHistoryCard') + ' ' + 'card phone-section double-gap-top'}>
+          className={this.props.getFocusClassName('FosterCareHistoryCard') + ' ' + 'card phone-section double-gap-top active-bar'}>
           <div className='card-header'><span>Information</span></div>
           <FosterCareHistoryFields
             yesNo={yesNo}

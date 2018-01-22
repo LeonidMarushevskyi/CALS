@@ -14,7 +14,7 @@ export default class PrivacyStatement extends React.Component {
         textAlignment='left'
         label='Privacy Statement'
         handleOnClick={() => this.props.setFocusState('PrivacyStatementCard')}
-        focusClassName={this.props.getFocusClassName('PrivacyStatementCard') + ' ' + 'card phone-section double-gap-top'}
+        focusClassName={this.props.getFocusClassName('PrivacyStatementCard') + ' ' + 'card phone-section double-gap-top active-bar'}
         showHeaderLink
         headerToggleId='privacyStatementToggle'
         headerDisplayLink={this.props.privacyStatementDisplay}

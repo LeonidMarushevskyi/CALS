@@ -11,7 +11,7 @@ export default class Rfa01AOverview extends React.Component {
         id='Rfa01AOverview'
         label='Rfa-01A Section Summary'
         handleOnClick={() => this.props.setFocusState('Rfa01AOverview')}
-        focusClassName={this.props.getFocusClassName('Rfa01AOverview') + ' ' + 'card phone-section double-gap-top'}>
+        focusClassName={this.props.getFocusClassName('Rfa01AOverview') + ' ' + 'card phone-section double-gap-top active-bar'}>
         <a href={urlPrefixHelper('/rfa/a01/' + this.props.applicationId + '/edit')} className='btn btn-default'>
           <p>Start RFA 01 A</p>
         </a>

@@ -10,7 +10,7 @@ export default class Lic198BOverview extends React.Component {
         id='Lic198BOverview'
         label='Lic198B Section Summary'
         handleOnClick={() => this.props.setFocusState('Lic198BOverview')}
-        focusClassName={this.props.getFocusClassName('Lic198BOverview') + ' ' + 'card phone-section double-gap-top'}>
+        focusClassName={this.props.getFocusClassName('Lic198BOverview') + ' ' + 'card phone-section double-gap-top active-bar'}>
         <span>default Lic198B </span>
       </CardLayout>
 
